@@ -199,3 +199,17 @@ form input {
 .btn-submit:hover {
   background-color: #2364ad;
 }
+
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .main-content {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    padding-top: 100px;
+  }
+}
