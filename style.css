@@ -24,6 +24,7 @@ button {
 .container {
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .header {
@@ -31,6 +32,8 @@ button {
   background-color: #f5f8fd;
   /* height: auto; */
   overflow: hidden;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 .logo {
@@ -45,7 +48,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: auto;
+  /* height: auto; */
 }
 
 /* .menu-bar {
@@ -103,7 +106,7 @@ main {
 
 .comment-box {
   background-color: #a6b0c0;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
 }
@@ -201,15 +204,130 @@ form input {
 }
 
 
-@media only screen and (max-width: 600px) {
+/* responsive */
+
+
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) { 
+  
+ 
+.header{
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-bar{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.menu-list a {
+  padding: 10px 15px;
+  color: #465f86;
+  background-color: transparent;
+}
+
+.main-content {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr ;
+  padding-top: 100px;
+}
+
+
+
+/* .products {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: flex-start;
+} */
+
+
+ }
+
+/* Small devices (landscape phones, less than 768px */
+@media (min-width: 576px) and (max-width: 767px) { 
+  
+  .main-content {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr ;
+    padding-top: 100px;
+  }
+
+ }
+ 
+/* Medium devices (tablets, less than 992px */
+@media (min-width: 768px) and (max-width: 991px) { 
+  
+
+  .main-content {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr ;
+    padding-top: 100px;
+  }
+
+ }
+
+/* Large devices (desktops, less than 1200px */
+@media (min-width: 992px) and (max-width: 1199px) { ... }
+}
+
+/* X-Large devices (large desktops, less than 1400px */
+@media (min-width: 1200px) and (max-width: 1399px) { ... }
+
+/* XX-Large devices (larger desktops */
+@media (min-width: 1400px) { ... }
+
+
+
+
+
+
+
+/* 
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .main-content {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    padding-top: 50px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
   .container {
     padding: 0 20px;
   }
 
   .main-content {
     display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr;
-    padding-top: 100px;
+    gap: 10px;
+    grid-template-columns: repeat(6, 1fr);
+    padding-top: 50px;
   }
-}
+
+  .commentary-sidebar {
+    grid-column: span 2;
+  }
+
+  .products {
+    grid-column: span 4;
+  }
+  .contact-box {
+    grid-column: 1/ -1;
+  }
+} */
